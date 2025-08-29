@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akhilesh Portfolio</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --nav-bg: #2e3b2e;
+    --nav-link: white;
+    --nav-hover: #a1c181;
+    --header-gradient: linear-gradient(to right, #3b4a3b, #a1c181);
+    --section-bg: #f0f4e8;
+    --card-bg: white;
+    --footer-bg: #2e3b2e;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+nav {
+    background-color: var(--nav-bg);
+}
+nav a {
+    color: var(--nav-link) !important;
+}
+nav a:hover {
+    color: var(--nav-hover) !important;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--header-gradient);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+header p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Floating circles */
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: float 6s infinite alternate;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+.projects .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--card-bg);
+}
+.projects .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--section-bg);
+}
+#contact .contact-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#">Akhilesh Portfolio</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item">
+    <select id="themeSelector" class="form-select form-select-sm ms-3">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="forest">Forest</option>
+    </select>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Header -->
+<header>
+<h1>Akhilesh Shrestha</h1>
+<p class="lead">Beginner Full-Stack Developer</p>
+
+<!-- Floating circles for visual effect -->
+<div class="floating-circle" style="width:100px; height:100px; background-color:#a1c181; top:10%; left:15%; animation-duration:5s;"></div>
+<div class="floating-circle" style="width:60px; height:60px; background-color:#ffffff; top:50%; left:70%; animation-duration:7s;"></div>
+<div class="floating-circle" style="width:80px; height:80px; background-color:#a1c181; top:30%; left:50%; animation-duration:6s;"></div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="text-center">
+<div class="container">
+<h2>About Me</h2>
+<p>Hello! My name is Akhilesh Shrestha and I am a student exploring the world of full-stack development. I enjoy creating clean and functional web pages and also experiment with ideas that catch my mind.</p>
+</div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+<div class="container">
+<h2 class="text-center">My Projects</h2>
+<div class="row mt-4">
+<div class="col-md-4 mb-4">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Personal Task Manager</h5>
+<p class="card-text">A simple web app to manage daily tasks, built with HTML, CSS, and JavaScript.</p>
+<a href="#" class="btn btn-success" data-bs-toggle="tooltip" title="Coming Soon">View Project</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Responsive Blog Template</h5>
+<p class="card-text">A clean, mobile-friendly blog layout created using Bootstrap.</p>
+<a href="#" class="btn btn-success" data-bs-toggle="tooltip" title="Coming Soon">View Project</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Portfolio Starter Kit</h5>
+<p class="card-text">A beginner-friendly template to showcase personal projects and skills.</p>
+<a href="#" class="btn btn-success" data-bs-toggle="tooltip" title="Coming Soon">View Project</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="text-center py-5">
+<div class="contact-card">
+<h2>Contact Me</h2>
+<p>If you would like to connect or collaborate, feel free to reach out!</p>
+<button id="contactBtn" class="btn btn-success">Show Email</button>
+<p id="email" class="mt-3" style="display:none;">Email: akhilesh@example.com</p>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2025 Akhilesh Shrestha. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Initialize tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+
+// Email toggle
+const contactBtn = document.getElementById('contactBtn');
+const email = document.getElementById('email');
+contactBtn.addEventListener('click', () => {
+    email.style.display = email.style.display === 'none' ? 'block' : 'none';
+});
+
+// Theme switcher
+const themes = {
+    light: {
+        '--bg-color': '#ffffff',
+        '--text-color': '#000000',
+        '--nav-bg': '#2e3b2e',
+        '--nav-link': 'white',
+        '--nav-hover': '#a1c181',
+        '--header-gradient': 'linear-gradient(to right, #3b4a3b, #a1c181)',
+        '--section-bg': '#f0f4e8',
+        '--card-bg': 'white',
+        '--footer-bg': '#2e3b2e'
+    },
+    dark: {
+        '--bg-color': '#121212',
+        '--text-color': '#ffffff',
+        '--nav-bg': '#1e1e1e',
+        '--nav-link': '#ffffff',
+        '--nav-hover': '#90ee90',
+        '--header-gradient': 'linear-gradient(to right, #222, #444)',
+        '--section-bg': '#1a1a1a',
+        '--card-bg': '#1e1e1e',
+        '--footer-bg': '#1e1e1e'
+    },
+    forest: {
+        '--bg-color': '#e8f5e9',
+        '--text-color': '#1b5e20',
+        '--nav-bg': '#388e3c',
+        '--nav-link': '#ffffff',
+        '--nav-hover': '#a5d6a7',
+        '--header-gradient': 'linear-gradient(to right, #2e7d32, #81c784)',
+        '--section-bg': '#c8e6c9',
+        '--card-bg': '#ffffff',
+        '--footer-bg': '#2e7d32'
+    }
+};
+
+const themeSelector = document.getElementById('themeSelector');
+themeSelector.addEventListener('change', (e) => {
+    const theme = themes[e.target.value];
+    for (const key in theme) {
+        document.documentElement.style.setProperty(key, theme[key]);
+    }
+});
+</script>
+
+</body>
+</html>
